@@ -113,7 +113,7 @@ def toggle_chatbot():
     if chatbot_frame.winfo_ismapped():
         chatbot_frame.place_forget()
     else:
-        chatbot_frame.place(x=canvas_width + canvas_x +5, y=200, width=300, height=600)
+        chatbot_frame.place(x=canvas_width + canvas_x +6, y=200, width=300, height=600)
 
 def toggle_chatbotvai():  #visionai button
     if chatbotv_frame.winfo_ismapped():

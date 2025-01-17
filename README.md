@@ -2,7 +2,7 @@
 
 ## **Overview**
 This project demonstrates **AI-Driven Digital Whiteboard**
-An interactive digital whiteboard application enhanced with AI capabilities(**Gemini 2.0 Multimodal**, **llama-3.3-70b-versatile**, and **Groq**), including visual analysis and an integrated chatbot assistant. This application combines drawing tools, document handling, and image upload.user can ask and solve their doubt regards interface on whiteboard.
+An interactive digital whiteboard application enhanced with AI capabilities(**Gemini 2.0 **, **llama-3.3-70b-versatile**, and **Groq**), including visual analysis and an integrated chatbot assistant. This application combines drawing tools, document handling, and image upload.user can ask and solve their doubt regards interface on whiteboard.
 ---
 
 ## **Features**
@@ -45,7 +45,7 @@ An interactive digital whiteboard application enhanced with AI capabilities(**Ge
 
 1. **clone the  repository**  
     ```bash
-   git clone https://github.com/ismartash/aidriven_whiteboard.git
+   git clone https://github.com/ismartash/interactive_white_AIboard.git
    ```
    
 2. **Run the Application**  
@@ -61,7 +61,7 @@ An interactive digital whiteboard application enhanced with AI capabilities(**Ge
 ### **Steps to Run this Project**
 1. Clone the repository:
    ```bash
-   git clone https://github.com/ismartash/aidriven_whiteboard.git
+   git clone https://github.com/ismartash/interactive_white_AIboard.git
    cd intelligentwhiteboard
    ```
 2. **Create a `.env` file in the root directory** with the following content:
