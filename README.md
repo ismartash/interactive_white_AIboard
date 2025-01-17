@@ -62,7 +62,7 @@ An interactive digital whiteboard application enhanced with AI capabilities(**Ge
 1. Clone the repository:
    ```bash
    git clone https://github.com/ismartash/interactive_white_AIboard.git
-   cd intelligentwhiteboard
+   cd interactive_white_AIboard
    ```
 2. **Create a `.env` file in the root directory** with the following content:
     ```env
@@ -72,7 +72,7 @@ An interactive digital whiteboard application enhanced with AI capabilities(**Ge
     ``` 
 3. Create Conda Environment:
    ```bash
-   conda create -n aiboard 
+   conda create -n aiboard (any envirnoment name you can give)
    conda activate aiboard
    ```
 4. Install dependencies:
