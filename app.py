@@ -31,8 +31,8 @@ def resource_path(relative_path):
 
 
 # Calculate canvas size based on screen dimensions
-canvas_width = int(screen_width * 0.8)  # 80% of screen width
-canvas_height = int(screen_height * 0.8)  # 80% of screen height
+canvas_width = int(screen_width * 0.9)  # 80% of screen width
+canvas_height = int(screen_height * 0.9)  # 80% of screen height
 
 # Calculate positions for UI elements
 sidebar_width = 60
@@ -493,13 +493,79 @@ document_button.config(command=insert_document)
 
 # Bottom toolbar buttons
 toolbar_y = canvas_height - 50
-Button(root, text="Previous", command=previous_slide, font=("Arial", 10), bg="#f2f3f5").place(x=canvas_x + canvas_width - 700, y=toolbar_y)
-Button(root, text="Next", command=next_slide, font=("Arial", 10), bg="#f2f3f5").place(x=canvas_x + canvas_width - 625, y=toolbar_y)
-Button(root, text="Text", bg="#f2f3f5", command=set_text_tool, font=("Arial", 10), width=10).place(x=canvas_x + 300, y=toolbar_y)
-Button(root, text="Rectangle", bg="#f2f3f5", command=set_rectangle_tool, font=("Arial", 10), width=10).place(x=canvas_x + 100, y=toolbar_y)
-Button(root, text="Oval", bg="#f2f3f5", command=set_oval_tool, font=("Arial", 10), width=10).place(x=canvas_x + 200, y=toolbar_y)
-Button(root, text="Clear Screen", bg="#f2f3f5", command=new_canvas, font=("Arial", 10), width=15).place(x=canvas_x + 400, y=toolbar_y)
+# Define common button style parameters
+button_style = {
+    'font': ('Arial', 10),
+    'relief': 'solid',
+    'borderwidth': 1,
+    'padx': 15,
+    'pady': 5,
+    'cursor': 'hand2'
+}
 
+# Create a horizontal layout with small gaps between buttons
+# Tool buttons
+Button(root,
+    text="Rectangle",
+    command=set_rectangle_tool,
+    bg="orange",
+    fg="white",
+    activebackground="#e9ecef",
+    width=8,
+    **button_style
+).place(x=canvas_x + 100, y=toolbar_y)
+
+Button(root,
+    text="Oval",
+    command=set_oval_tool,
+    bg="green",
+    fg="white",
+    activebackground="#e9ecef",
+    width=8,
+    **button_style
+).place(x=canvas_x + 190, y=toolbar_y)
+
+Button(root,
+    text="Text",
+    command=set_text_tool,
+    bg="blue",
+    fg="white",
+    activebackground="#e9ecef",
+    width=8,
+    **button_style
+).place(x=canvas_x + 280, y=toolbar_y)
+
+# Clear Screen button - Red color scheme
+Button(root,
+    text="Clear Screen",
+    command=new_canvas,
+    bg="#dc3545",  # Red
+    fg="white",
+    activebackground="#e9ecef",
+    width=12,
+    **button_style
+).place(x=canvas_x + 370, y=toolbar_y)
+
+# Navigation buttons - Blue color scheme
+Button(root, 
+    text="Previous",
+    command=previous_slide,
+    bg="black",  #violet
+    fg="white",
+    activebackground="#357abd",
+    width=8,
+    **button_style
+).place(x=canvas_x + canvas_width - 800, y=toolbar_y)
+
+Button(root,
+    text="Next",
+    command=next_slide,
+    bg="purple",  #purple
+    fg="white",
+    activebackground="#357abd",
+    width=8,
+    **button_style
+).place(x=canvas_x + canvas_width - 640, y=toolbar_y)
 canvas.bind('<Button-1>', lambda event: on_canvas_click(event) if active_tool == "text" else locate_xy(event))
 canvas.bind('<ButtonRelease-1>', add_shape)
 
