@@ -109,13 +109,13 @@ def display_pallete():
         id = colors.create_rectangle((10, 10 + i * 30, 30, 30 + i * 30), fill=color_name)
         colors.tag_bind(id, '<Button-1>', lambda x, col=color_name: show_color(col))
 
-def toggle_chatbot():
+def toggle_chatbot():#chatbot
     if chatbot_frame.winfo_ismapped():
         chatbot_frame.place_forget()
     else:
-        chatbot_frame.place(x=canvas_width + canvas_x +6, y=200, width=300, height=600)
+        chatbot_frame.place(x=canvas_width + canvas_x-200, y=200, width=300, height=600)
 
-def toggle_chatbotvai():  #visionai button
+def toggle_chatbotvai():  #ask doubt 
     if chatbotv_frame.winfo_ismapped():
         chatbotv_frame.place_forget()
     else:
